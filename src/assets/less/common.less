@@ -1,0 +1,42 @@
+
+/*リストの上のアクションボタンエリア*/
+.ant-card-body .table-operator {
+  margin-bottom: 18px;
+}
+/** ボタン間隔 */
+.table-operator .ant-btn {
+  margin-right: 6px
+}
+/*リストtdのパディング設定は、リストサイズを制御できます。*/
+.ant-table-tbody .ant-table-row td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/*リストページがモーダルポップアップ*/
+.ant-modal-cust-warp {
+  height: 100%
+}
+
+/*モーダルY軸スクロールバーのポップアップ*/
+.ant-modal-cust-warp .ant-modal-body {
+  height: calc(100% - 110px) !important;
+  overflow-y: auto
+}
+
+/*モーダルはコンテンツ、次に本文とともにポップアップするため、スクロールバーは本文で制御されます*/
+.ant-modal-cust-warp .ant-modal-content {
+  height: 90% !important;
+  overflow-y: hidden
+}
+/*このスタイルをリスト内の写真に追加します。*/
+.anty-img-wrap {
+  height: 25px;
+  position: relative;
+}
+.anty-img-wrap > img {
+  max-height: 100%;
+}
+/*リスト内の範囲クエリスタイル*/
+.query-group-cust{width: calc(50% - 10px)}
+.query-group-split-cust:before{content:"~";width: 20px;display: inline-block;text-align: center}

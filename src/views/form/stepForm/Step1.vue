@@ -1,0 +1,60 @@
+<template>
+  <div>
+    <a-form style="max-width: 500px; margin: 40px auto 0;">
+      <a-form-item
+        label="支払い口座"
+        :labelCol="{span: 5}"
+        :wrapperCol="{span: 19}"
+      >
+        <a-select value="1" placeholder="ant-design@alipay.com">
+          <a-select-option value="1">ant-design@alipay.com</a-select-option>
+        </a-select>
+      </a-form-item>
+      <a-form-item
+        label="入金口座"
+        :labelCol="{span: 5}"
+        :wrapperCol="{span: 19}"
+      >
+        <a-input-group :compact="true" style="display: inline-block; vertical-align: middle">
+          <a-select defaultValue="alipay" style="width: 100px">
+            <a-select-option value="alipay">アリペイを支払う</a-select-option>
+            <a-select-option value="wexinpay">WeChat</a-select-option>
+          </a-select>
+          <a-input :style="{width: 'calc(100% - 100px)'}" value="test@example.com"/>
+        </a-input-group>
+      </a-form-item>
+      <a-form-item
+        label="受取人の名前"
+        :labelCol="{span: 5}"
+        :wrapperCol="{span: 19}"
+      >
+        <a-input value="Alex" />
+      </a-form-item>
+      <a-form-item
+        label="振替金額"
+        :labelCol="{span: 5}"
+        :wrapperCol="{span: 19}"
+      >
+        <a-input prefix="￥" value="5000" />
+      </a-form-item>
+      <a-form-item :wrapperCol="{span: 19, offset: 5}">
+        <a-button type="primary" @click="nextStep">次のステップ</a-button>
+      </a-form-item>
+    </a-form>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: "Step1",
+    methods: {
+      nextStep () {
+        this.$emit('nextStep')
+      }
+    }
+  }
+</script>
+
+<style scoped>
+
+</style>
